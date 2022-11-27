@@ -1,0 +1,27 @@
+<p>  ngfor assignment!</p>
+<div>
+    <div class="title">
+        {{title}}
+    </div>
+</div>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Degree</th>
+                <th>Univercity</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let Student of students">
+                <td>{{Student.Name}}</td>
+                <td>{{Student.Degree}}</td>
+                <td>{{Student.Univercity}}</td>
+                <td>{{Student.Year}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

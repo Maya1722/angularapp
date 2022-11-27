@@ -1,0 +1,39 @@
+<h1> Warning Alert component created With CLI</h1>
+<h3> This is a component created with cli !</h3>
+
+<p> server with Id {{statusId}} is{{serverStatus}} mode</p>
+
+<button [disabled]="!allowNewSevers" (click)="onClickSever()">ADD SERVER</button>
+
+<img [src]="imgUrl">
+
+<div>
+    two way binding
+</div>
+<div>
+<input type="text" [(ngModel)]="serverName">
+
+
+</div>
+{{serverName}}
+
+<br>
+<br>
+<br>
+
+
+
+<div class="hd">
+  userName: <input type="text"[(ngModel)]="userName">
+  <br>
+  userName:{{userName}}
+  <br>
+  <button [disabled]="!sendServer" class="btn btn-primary" (click)="Reset()">Reset</button>
+
+  
+
+</div>
+
+
+
+

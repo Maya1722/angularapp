@@ -1,0 +1,26 @@
+<p> ngSwitch assignment</p>
+<div class="container">
+    <div class="row">
+    <div class="col-md-4"><!--bootstrapp class form control-->
+        <select class="form-control" (change)="getProductValue($event)">
+            <div class="Default">select product</div>
+            <option value="Angular">Angular</option>
+            <option value="React">React</option>
+            <option value="Java">Java</option>
+            <option value=".Net">.Net</option>
+        </select>
+    </div>
+    
+    <div class="col-md-12" [ngSwitch]="select"><!--[ngSwithch case ]=""-->
+        <h2 class="text-success" *ngSwitchDefault>Select Product</h2>
+       <h2 class="text-success" *ngSwitchCase="'Angular'">Angular</h2>
+       <h2 class="text-success"  *ngSwitchCase="'React'">React</h2>
+ 
+       <h2 class="text-success"  *ngSwitchCase="'java'">Java</h2>
+       <h2 class="text-success"  *ngSwitchCase="'.Net'">.Net</h2>
+ 
+ 
+ 
+ </div>
+ </div>
+ </div>

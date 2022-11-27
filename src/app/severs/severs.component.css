@@ -1,0 +1,11 @@
+h3{ background-color: brown;
+    border: 2px black;         }
+
+.hd{
+
+background-color: rgb(229, 100, 100);
+text-align: center;
+display: inline-block;
+height: 100px;
+width:400px;
+}

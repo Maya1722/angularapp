@@ -1,0 +1,19 @@
+.container{
+
+    background-color: rgb(148, 148, 224);
+    justify-items: center;
+
+}
+.col-md-4{
+
+    border: 5px;
+    background-color: aqua;
+    border-color: black;
+    align-items: center;
+}
+p{
+
+    font-size:25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:blue;
+}
