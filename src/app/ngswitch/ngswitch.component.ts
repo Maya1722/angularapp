@@ -15,7 +15,8 @@ export class NgswitchComponent implements OnInit {
   }
   getProductValue(Value){
 
-    console.log(Value); //do this for when we click on mobile then only one mobile shown
+    console.log(Value.target.Value); 
+    this.selectedProduct=Value.target.Value//do this for when we click on mobile then only one mobile shown
     
   }
   }

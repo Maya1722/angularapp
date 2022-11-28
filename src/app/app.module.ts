@@ -11,6 +11,8 @@ import { DemodirectivesComponent } from './demodirectives/demodirectives.compone
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { NgassignmentComponent } from './ngassignment/ngassignment.component';
 import { NgforComponent } from './ngfor/ngfor.component';
+import { AttriComponent } from './attri/attri.component';
+import { CustdirDirective } from './custdir.directive';
 
 
 
@@ -23,6 +25,8 @@ import { NgforComponent } from './ngfor/ngfor.component';
     NgswitchComponent,
     NgassignmentComponent,
     NgforComponent,
+    AttriComponent,
+    CustdirDirective,
     
   
   

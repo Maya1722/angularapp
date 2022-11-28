@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Student } from '../model/students';
 @Component({
+
   selector: 'app-ngfor',
   templateUrl: './ngfor.component.html',
   styleUrls: ['./ngfor.component.css']

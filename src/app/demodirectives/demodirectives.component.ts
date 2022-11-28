@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from '../model/movies';
 
 @Component({
   selector: 'app-demodirectives',
