@@ -2,15 +2,77 @@
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
-  </h1>
-  <app-server></app-server> 
-  <app-severs></app-severs>
+  
+
+   <!--<app-severs></app-severs>
    <app-ngswitch></app-ngswitch>
    <app-demodirectives></app-demodirectives>
+   <app-ngassignment></app-ngassignment>-->
+   <!--<app-ngfor></app-ngfor>
+   <app-attri></app-attri>-->
 
-   <app-ngassignment></app-ngassignment>
-   <app-ngfor></app-ngfor>
-   
-   <app-attri></app-attri>
-   
+  <!--<app-pass [myinputMsg]="uname"></app-pass>-->
+
+
+  <!--<ul *ngFor="let f of foods">
+     <li>
+      {{f}}
+    </li>
+  </ul>-->
+
+  <!--<app-demo (foodevent)="getDataFromChild($event)">
+  </app-demo>-->
+
+  <!--<div *ngFor="let data of Users">
+  <app-demo [Employee]="data"></app-demo>
+  </div>-->
+ 
+  <div>
+  <select (change)="uid = sid.value" #sid>
+    <option selected disabled>No value selected</option>
+    <option [value]="id" *ngFor="let id of [1,2,3,4]">
+      {{id}}
+    </option>  
+    </select>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-12">
+  
+  <input type="text" placeholder="enter value" (blur)="handleData($event)">
+  <p>product Name:<input type="text" placeholder="enter product name"[(ngModel)]="name"></p>
+  <p>product price:<input type="text" placeholder="enter product price"[(ngModel)]="name"></p>
+</div>
+</div>
+    <app-hooks [userid]="uid" [parentData]="data" [product]="product">
+      <button class="btn btn-primary"(click)="updateProduct()">updateProduct</button>
+    
+      <h1 #child> this is child content coming from parent component</h1>
+  </app-hooks>
+
+
+  <!---- <div class="assign">
+
+    <select (change)="fruitName = fd.value" #fd>
+      <option selected disabled>No item selected</option>
+      <option [value]="Name" *ngFor="let Name of ['Apple','Mango','Banana','pineapple']">
+      {{Name}}
+      </option>
+      </select>
+    </div> 
+<div class="hook">
+      <app-hooksassignment [Fruit]="fruitName"></app-hooksassignment>
+  
+</div>   
+<app-dire></app-dire>-->
+<!--<app-text></app-text>
+<ul *ngFor="let item of items">
+<li>
+  {{item}}
+</li>
+</ul>-->
+
+<!--<app-practise></app-practise>-->
+
+
   <router-outlet></router-outlet>

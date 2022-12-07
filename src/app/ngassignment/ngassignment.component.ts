@@ -11,10 +11,10 @@ export class NgassignmentComponent implements OnInit {
 
   ngOnInit() {
   }
-  getProductValue(Value){
+  getProductValue(value){
 
-    console.log(Value.target.Value);
-    this.selectedProduct=Value.target.Value; //do this for when we click on mobile then only one mobile shown
+    console.log(value.target.value);
+    this.selectedProduct = value.target.value; //do this for when we click on mobile then only one mobile shown
     
   }
 

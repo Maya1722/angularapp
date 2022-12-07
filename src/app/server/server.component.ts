@@ -1,5 +1,8 @@
+
 import { Component } from "@angular/core";
-import { resetFakeAsyncZone } from "@angular/core/testing";
+ 
+
+
 
 @Component({
     selector: 'app-server',
@@ -8,22 +11,27 @@ import { resetFakeAsyncZone } from "@angular/core/testing";
 })
 export class ServerComponent{
   
-serverStatus:string='online';
-serverId:number= 107;
-serverName:string='codemind Technology';
-allowServer= true;
-sendServer=false;
-userName:string='maya shingne';
+serverId:number=17;
+serverStatus:string="online";
+allowNewServer=true;
+ServerCreation:string='server not created';
+Username:string="codemind";
 constructor(){
 setTimeout(()=>{
 
-    this.allowServer=true;
+this.allowNewServer=true;
 },5000);
+
 }
 
-Reset (){
+getServerStatus(){
 
-this.userName='';
+return this.serverStatus;
+
+
+}
+onClickServer(){
+this.ServerCreation='server created';
 
 }
 

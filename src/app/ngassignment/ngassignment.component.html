@@ -1,26 +1,24 @@
 <p> ngSwitch assignment</p>
 <div class="container">
-    <div class="row">
-    <div class="col-md-4"><!--bootstrapp class form control-->
-        <select class="form-control" (change)="getProductValue($event)">
-            <div class="Default">select product</div>
-            <option value="Angular">Angular</option>
-            <option value="React">React</option>
-            <option value="Java">Java</option>
-            <option value=".Net">.Net</option>
-        </select>
-    </div>
-    
+<div class="row">
+    <div class="col-md-4">
+    <select class="form-control"(change)="getProductValue($event)">
+    <option value="default">select product</option>    
+    <option value="B.E">B.E</option>
+    <option value="MBBS">MBBS</option>
+    <option value="PHD">PHD</option>
+    <option value="BPHARM">BPHARM</option>
+    </select>
+</div>
     <div class="col-md-12" [ngSwitch]="selectedProduct"><!--[ngSwithch case ]=""-->
-        <h2 class="text-success" *ngSwitchDefault>"please Select Product"</h2>
-       <h2 class="text-success"  *ngSwitchCase="'Angular'">Angular</h2>
-       <h2 class="text-success"  *ngSwitchCase="'React'">React</h2>
+        <h2 class="text-success" *ngSwitchDefault>please Select Product</h2>
+       <h2 class="text-success"  *ngSwitchCase="'B.E'">B.E</h2>
+       <h2 class="text-success"  *ngSwitchCase="'MBBS'">MBBS</h2>
  
-       <h2 class="text-success"  *ngSwitchCase="'java'">Java</h2>
-       <h2 class="text-success"  *ngSwitchCase="'.Net'">.Net</h2>
- 
- 
+       <h2 class="text-success"  *ngSwitchCase="'PHD'">PHD</h2>
+       <h2 class="text-success"  *ngSwitchCase="'BPHARM'">BPHARM</h2>
  
  </div>
+
  </div>
  </div>

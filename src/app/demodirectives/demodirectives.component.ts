@@ -13,7 +13,7 @@ export class DemodirectivesComponent implements OnInit {
   movies: Movie[] = [
     { title: '3 Idiots', director: 'Rajkumar', cast: 'Amir', releaseDate: '2007' },
     { title: 'Kantara', director: 'Rishab', cast: 'Rishab', releaseDate: '2022'},
-    { title: 'KGF', director: 'RockBhai', cast:'Yash', releaseDate: '2019'}
+    {title:'K3G',director:'yash raj',cast:'sahrukh',releaseDate:'2007'}
   ]
   
 

@@ -1,0 +1,28 @@
+
+<div class="container mt-5">
+    <div class="row">
+    <div class="col-md-12">
+  <input #myuser type="text" class="form-control" [placeholder]=" UserName">
+  <button (click)="onClick(myuser) "class="btn btn-primary mt-3">create user</button>
+  <table class="table table-bordered  mt-3">
+    <thead class="thead-light">
+      <tr>
+        <th>sr.No</th>
+        <th>Use Name</th>
+        <th>Delete user</th>
+      </tr>
+    </thead>
+  <tbody>
+      <tr *ngFor="let i of userlist;index as userno">
+    <td>{{userno+1}}</td>
+    <td>{{i}}</td>
+
+    <td> 
+      <button (click)="ondelete(userno)" class="btn  btn-success">Remove User</button>
+    </td>
+       </tr> 
+    </tbody>
+  </table>
+  </div>
+</div>
+</div>

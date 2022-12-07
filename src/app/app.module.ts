@@ -13,6 +13,13 @@ import { NgassignmentComponent } from './ngassignment/ngassignment.component';
 import { NgforComponent } from './ngfor/ngfor.component';
 import { AttriComponent } from './attri/attri.component';
 import { CustdirDirective } from './custdir.directive';
+import { PassComponent } from './pass/pass.component';
+import { DemoComponent } from './demo/demo.component';
+import { HooksComponent } from './hooks/hooks.component';
+import { HooksassignmentComponent } from './hooksassignment/hooksassignment.component';
+import { DireComponent } from './dire/dire.component';
+import { TextComponent } from './text/text.component';
+import { PractiseComponent } from './practise/practise.component';
 
 
 
@@ -27,6 +34,13 @@ import { CustdirDirective } from './custdir.directive';
     NgforComponent,
     AttriComponent,
     CustdirDirective,
+    PassComponent,
+    DemoComponent,
+    HooksComponent,
+    HooksassignmentComponent,
+    DireComponent,
+    TextComponent,
+    PractiseComponent,
     
   
   

@@ -1,0 +1,27 @@
+<p>practise works!</p>
+<div *ngIf="isShow">practise is done</div>
+
+
+<div class="container">
+<div class="row">
+    <div class="col-md-4">
+    <select class="form-control"(click)="getProductValue($event)">
+    <option value="laptop">laptop</option>
+    <option value="tv">tv</option>
+    <option value="mobile">mobile</option>
+    <option value="pc">pc</option>
+    </select>
+    </div>
+
+    <div class="col-md-12" [ngSwitch]="selectedProduct">
+     <h2 class="text-success" *ngSwitchDefault>"selected product"</h2>
+     <h2 class="text-success" *ngSwitchCase="'laptop'">laptop</h2>
+     <h2 class="text-success" *ngSwitchCase="'tv'">tv</h2>
+     <h2 class="text-success" *ngSwitchCase="'mobile'">mobile</h2>
+     <h2 class="text-success" *ngSwitchCase="'pc'">pc</h2>
+    </div>
+</div>
+</div>
+
+
+
