@@ -1,0 +1,88 @@
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded py-5">
+            <form [formGroup]="myReactiveForm" (ngSubmit)="OnSubmit()">
+                <div class="form-group">
+                    <label for="first name">First name</label>
+                    <input type="text" class="form-control"  id="first name" formControlName="first name" placeholder="Enter first name" >
+                    <small class="text-danger" *ngIf="!myReactiveForm.get('first name').valid && myReactiveForm.get('first name').touched">
+                
+                        <small  class ="text-danger" *ngIf="!myReactiveForm.get('first name').errors['minLength']">The name must be at least five characters long.
+                      </small>
+    
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label for="last name">Last name</label>
+                    <input type="text" class="form-control"  id="last name" formControlName="last name" placeholder="Enter last name " >
+                    <small class="text-danger" *ngIf="!myReactiveForm.get('last name').valid && myReactiveForm.get('last name').touched">
+                    
+                        <small class ="text-danger" *ngIf="!myReactiveForm.get('last name').errors['minLength']">
+                            The name must be at least 10 characters long.
+                          </small>
+                            
+                        
+                    </small>
+                </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" class="form-control"  id="age" formControlName="age" >
+                        <small class="text-danger" *ngIf="!myReactiveForm.get('age').valid && myReactiveForm.get('age').touched">
+                            <small *ngIf="myReactiveForm.get('age').errors['required']">Please enter age in 17-20</small>
+                            
+                            <small *ngIf="myReactiveForm.get('age').errors['ageNotAllowed']"> {{myReactiveForm.get('age').value}}</small>
+                        </small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text"  id="email" class="form-control" formControlName="email" placeholder="Enter email" >
+                 <small class="text-danger" *ngIf="!myReactiveForm.get('email').valid && myReactiveForm.get('email').touched">
+                    Please enter valid email Address
+                 </small>
+                </div>
+                <div class="form-group">
+                    <label for="mobile number">Mobile Number</label>
+                    <input type=" mobile number"  id="mobile number" class="form-control" formControlName="mobile number" placeholder="Enter mobile number" >
+                 <small class="text-danger" *ngIf="!myReactiveForm.get('mobile number').valid && myReactiveForm.get('mobile number').touched">
+            
+                    <small *ngIf="!myReactiveForm.get('mobile number').errors['minLength']">Please enter 10 digit number</small>
+                            
+                            
+                 </small>
+                </div>
+
+        
+                <div class="form-group">
+                    <label for="city"> select city</label>
+                    <select class="form-control" formControlName="city" id="city" >
+                        <option value="Kolkata">kolkata</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi">Delhi</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <div class="custom-control custom-radio" *ngFor="let gender of genders">
+                    
+                      <input type="radio" id="{{gender.id}}" value="{{gender.value}}" class="custom-control-input" formControlName="gender">
+                    <label for="{{gender.id}}">{{gender.value}}</label>
+                </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password"  id="password" class="form-control" formControlName="password" placeholder="Enter password" >
+                 <small class="text-danger" *ngIf="!myReactiveForm.get('password').valid && myReactiveForm.get('password').touched">
+                    <small *ngIf="myReactiveForm.get('password').errors['required']">Please enter password</small>
+            
+                 </small>
+                </div>
+               
+               
+                <button class="btn btn-success mt-4">Resister</button>
+            </form>
+        </div>
+        
+    </div>
+</div>
+

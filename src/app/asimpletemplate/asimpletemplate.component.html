@@ -1,0 +1,75 @@
+
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+    <form (ngSubmit)="Onsubmit(myForm)" #myForm="ngForm">
+     <div ngModelGroup="studentDetails"  #studentDetails="ngModelGroup">
+    <div class="form-group">
+    <label for="studentname">Student Name</label>
+    <input type="studentname" class="form-control" id="studentname" name="studentname" placeholder="Enter student name" [(ngModel)]= "studentname" required>
+    <small *ngIf="!studentname">Student Name is: {{studentname}} </small>
+</div>
+    <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" #email="ngModel" email name="email" placeholder="Enter email"  ngModel  required>
+    <small class ="text-danger" *ngIf="!email.valid && email.touched">Enter valid email</small>
+    
+</div>
+    <small *ngIf="!studentDetails.valid && studentDetails.touched">please enter valid details</small>
+</div>
+<div class="form-group">
+    <div *ngFor="let gender of genders" class="custom-control custom-radio">
+        <input type="radio" id="{{gender.id}}" name="gender" value="{{gender.value}}" [ngModel]="defaultGender" class="custom-control-input">
+        <label for="{{gender.id}}" class="custom-control-label">{{gender.value}}</label>
+       </div>
+    </div>
+
+    <div class="form-group">
+    <input type="date" min="{{minDate}}" class="form-control" name="date" id="date" placeholder="dd/mm/yy"  ngModel>
+</div> 
+    <div class="form-group">
+    <label for="address">Address</label>
+    <input type="address" class="form-control" id="address" name="address" placeholder="address" ngModel >
+    </div>
+    <div class="form-group">
+    <label for="collegename">college name</label>
+    <input type="collegename" class="form-control" id="collegename" name="collegename" placeholder="college name" ngModel>
+    </div>
+    <div class="form-group">
+        <label for="department">Department</label>
+        <select class="form-control" name="department" id="department" [ngModel]="defaultValue">
+        <option value="computer science">Computer science</option>
+        <option value="electronics & telecommunication">Electronics & Telecommunication</option>
+        <option value="mechanical">Mechanical</option>
+        <option value="chemical">Chemical</option>
+
+
+        </select>
+        </div>
+
+    <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">Submit</button>
+    <div class="row justify-content-center mt-2" *ngIf="submitted">
+        <div class="col-md-6 rounded shadow py-4">
+            <h2>Form data</h2>
+            <p>Student name: <strong>{{student.studentname}}</strong></p>  
+            <p>Email: <strong>{{student.email}}</strong></p>
+            <p>Gender:<strong>{{student.gender}}</strong></p>
+            <p>Date:<strong>{{student.date}}</strong></p>
+            <p>Address: <strong>{{student.address}}</strong></p>
+            <p>College name:<strong>{{student.collegename}}</strong></p>
+            <p>Department:<strong>{{student.Department}}</strong></p>
+
+        </div>
+
+    </div>
+
+    </form>
+
+
+
+        </div>
+        
+    </div>
+</div>

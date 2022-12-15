@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { SeversComponent } from './severs/severs.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DemodirectivesComponent } from './demodirectives/demodirectives.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { NgassignmentComponent } from './ngassignment/ngassignment.component';
@@ -20,6 +20,11 @@ import { HooksassignmentComponent } from './hooksassignment/hooksassignment.comp
 import { DireComponent } from './dire/dire.component';
 import { TextComponent } from './text/text.component';
 import { PractiseComponent } from './practise/practise.component';
+import { SimpletemplateformComponent } from './simpletemplateform/simpletemplateform.component';
+import { AsimpletemplateComponent } from './asimpletemplate/asimpletemplate.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { SubscriptionComponent } from './subscription/subscription.component';
+import { AreactiveformComponent } from './areactiveform/areactiveform.component';
 
 
 
@@ -41,6 +46,11 @@ import { PractiseComponent } from './practise/practise.component';
     DireComponent,
     TextComponent,
     PractiseComponent,
+    SimpletemplateformComponent,
+    AsimpletemplateComponent,
+    ReactiveformComponent,
+    SubscriptionComponent,
+    AreactiveformComponent,
     
   
   
@@ -48,7 +58,8 @@ import { PractiseComponent } from './practise/practise.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Product } from './model/product';
+import { NgForm } from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-root',
@@ -17,8 +20,10 @@ export class AppComponent {
   name:string;
   price:number;
   product:Product=new Product();
+  appChildExists:boolean=true;
   currentitem='television';
   items=[];
+
 
   Users=[{
         name:'jack',
@@ -66,4 +71,17 @@ updateProduct(){
   this.product.name=this.name;
   this.product.price=this.price;
 }
+Destroy(){
+  this.appChildExists=false;
 }
+
+
+
+
+
+
+
+
+
+}
+

@@ -1,4 +1,4 @@
-import { Component, OnInit,OnChanges,Input,SimpleChanges, DoCheck, AfterContentInit, ContentChild, ElementRef, AfterContentChecked, ViewChild, AfterViewInit, AfterViewChecked } from '@angular/core';
+import { Component, OnInit,OnChanges,Input,SimpleChanges, DoCheck, AfterContentInit, ContentChild, ElementRef, AfterContentChecked, ViewChild, AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
 
 
 @Component({
@@ -7,7 +7,7 @@ import { Component, OnInit,OnChanges,Input,SimpleChanges, DoCheck, AfterContentI
   styleUrls: ['./hooks.component.css']
 })
  
-  export class HooksComponent implements OnInit, OnChanges,DoCheck,AfterContentInit,AfterContentChecked,AfterViewInit,AfterViewChecked{
+  export class HooksComponent implements OnInit, OnChanges,DoCheck,AfterContentInit,AfterContentChecked,AfterViewInit,AfterViewChecked,OnDestroy{
   
   
     @Input() userid: number;
@@ -20,6 +20,10 @@ import { Component, OnInit,OnChanges,Input,SimpleChanges, DoCheck, AfterContentI
       this.pi = 3.14;
       console.log("HooksComponent constructor called");
       
+     }
+     ngOnDestroy(): void {
+       console.log("ngOnDestroy called");
+       
      }
      ngAfterViewChecked(): void {
        console.log("ngAfterViewChecked Called");
