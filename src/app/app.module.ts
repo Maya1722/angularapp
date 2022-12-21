@@ -25,6 +25,8 @@ import { AsimpletemplateComponent } from './asimpletemplate/asimpletemplate.comp
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { AreactiveformComponent } from './areactiveform/areactiveform.component';
+import { Servicecomp1Component } from './servicecomp1/servicecomp1.component';
+import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
 
 
 
@@ -51,6 +53,8 @@ import { AreactiveformComponent } from './areactiveform/areactiveform.component'
     ReactiveformComponent,
     SubscriptionComponent,
     AreactiveformComponent,
+    Servicecomp1Component,
+    Servicecomp2Component,
     
   
   

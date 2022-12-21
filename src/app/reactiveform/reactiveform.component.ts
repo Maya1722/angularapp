@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 @Component({
   selector: 'app-reactiveform',
@@ -15,10 +15,10 @@ export class ReactiveformComponent implements OnInit {
     { id:'1' , value:'male' },
     { id:'2',value:'female '}
   ]
-  constructor() {
+  constructor( private _fb : FormBuilder) {
     this.createForm();
    }
-
+   
   ngOnInit() {
 
      // setTimeout(() => {
@@ -53,19 +53,30 @@ export class ReactiveformComponent implements OnInit {
 
   createForm(){
 
-    this.myReactiveForm= new FormGroup({
+  //   this.myReactiveForm= new FormGroup({
 
-    'userDetails' : new FormGroup({
-  'username' : new FormControl ('',[Validators.required,this.NaNames.bind(this)]),
-      'email'  : new FormControl('',[Validators.required,Validators.email],this.NaEmails),
-    }),
-      'course' :new FormControl('Angular'),
-      'gender':new FormControl(''),
-      'skills':new FormControl([
-        new FormControl(null,Validators.required)
+  //   'userDetails' : new FormGroup({
+  // 'username' : new FormControl ('',[Validators.required,this.NaNames.bind(this)]),
+  //     'email'  : new FormControl('',[Validators.required,Validators.email],this.NaEmails),
+  //   }),
+  //     'course' :new FormControl('Angular'),
+  //     'gender':new FormControl(''),
+  //     'skills':new FormControl([
+  //       new FormControl(null,Validators.required)
 
-      ])
-    })
+  //     ])
+   // })
+this.myReactiveForm=this._fb.group({
+
+  userDetails:this._fb.group({
+    username:['',Validators.required],
+    email:['',Validators.required]
+  }),
+course:['Angular'],
+gender:['Male'],
+skills:this._fb.array([])
+})
+
   }
 
 
