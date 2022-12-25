@@ -1,4 +1,6 @@
+
 import { Component, OnInit } from '@angular/core';
+import { DemoService } from '../services/demo.service';
 
 @Component({
   selector: 'app-servicecomp2',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servicecomp2.component.css']
 })
 export class Servicecomp2Component implements OnInit {
-
-  constructor() { }
+products={};
+  constructor(private _demoService:DemoService) { }
 
   ngOnInit() {
+    this.products=this._demoService.products;
   }
+  OnSubscribe(){
+    this._demoService.display();
+  }
+
 
 }

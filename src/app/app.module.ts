@@ -27,6 +27,22 @@ import { SubscriptionComponent } from './subscription/subscription.component';
 import { AreactiveformComponent } from './areactiveform/areactiveform.component';
 import { Servicecomp1Component } from './servicecomp1/servicecomp1.component';
 import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
+import { Comp2Component } from './comp2/comp2.component';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp3Component } from './comp3/comp3.component';
+import { Comp4Component } from './comp4/comp4.component';
+import { FilterpipeComponent } from './filterpipe/filterpipe.component';
+
+import { EmployeeDataComponent } from './employee-data/employee-data.component';
+import { FilterPipe } from './pipe/filter.pipe';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { ProductComponent } from './product/product.component';
+import { HomeComponent } from './home/home.component';
+import{HttpClientModule} from '@angular/common/http';
+import { Servicecomp3Component } from './servicecomp3/servicecomp3.component';
+import { LoginComponent } from './login/login.component';
+import { GallaryComponent } from './gallary/gallary.component';
 
 
 
@@ -55,6 +71,21 @@ import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
     AreactiveformComponent,
     Servicecomp1Component,
     Servicecomp2Component,
+    Comp2Component,
+    Comp1Component,
+    Comp3Component,
+    Comp4Component,
+    FilterpipeComponent,
+    
+    EmployeeDataComponent,
+    FilterPipe,
+    AboutusComponent,
+    ContactusComponent,
+    ProductComponent,
+    HomeComponent,
+    Servicecomp3Component,
+    LoginComponent,
+    GallaryComponent,
     
   
   
@@ -63,7 +94,8 @@ import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

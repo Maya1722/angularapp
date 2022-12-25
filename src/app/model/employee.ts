@@ -5,3 +5,4 @@ export class Employee
     email: string;
     gender:string;
 }
+

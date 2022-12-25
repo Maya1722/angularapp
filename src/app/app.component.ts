@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Product } from './model/product';
 import { NgForm } from '@angular/forms';
+import { DemoService } from './services/demo.service';
 
 
 
@@ -8,8 +9,17 @@ import { NgForm } from '@angular/forms';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  changeDetection:ChangeDetectionStrategy.OnPush
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
+  constructor(){
+
+  }
+  ngOnInit():void{
+     
+     
+  }
   title = 'angularapp';
   uname='i am use angular app';
   public uid:number;
@@ -45,12 +55,7 @@ export class AppComponent {
 
 }
 ]
-ngOnInit() {
- 
-      
-        
 
-}
 
   getDataFromChild(value) {
     console.log(value);

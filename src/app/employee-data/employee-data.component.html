@@ -1,0 +1,27 @@
+
+<div class="container">
+        <table class="table">
+             <thead>
+                <tr>
+                
+                    <th scope="col">Name</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">company</th>
+                    <th scope="col">gender</th>
+                    <th scope="col">salary</th>
+
+                </tr>
+             </thead>   
+             <tbody>
+                <tr *ngFor="let users of UsersArray">
+                    <td>{{ users.Name|filter:users.gender}}</td>
+                    <td>{{users.Id}}</td>
+                    <td>{{users.company}}</td>
+                    <td>{{users.gender}}</td>
+                    <td>{{users.salary}}</td>
+
+                </tr>
+             </tbody>
+        </table>
+    </div>
+
