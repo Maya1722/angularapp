@@ -1,16 +1,14 @@
-.container{
-
+.header{
+    background-color: burlywood;
     height: 20px;
     width:100%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
-    color: black;
-
-}
-.myclass{
-
     
-    background-color: rgb(172, 234, 72);
-    padding:5px;
-    margin-left: 30px;
+
 }
+.nav{
+
+    background-color: aquamarine;
+}
+

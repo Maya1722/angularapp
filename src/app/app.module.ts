@@ -43,6 +43,10 @@ import{HttpClientModule} from '@angular/common/http';
 import { Servicecomp3Component } from './servicecomp3/servicecomp3.component';
 import { LoginComponent } from './login/login.component';
 import { GallaryComponent } from './gallary/gallary.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { DemopostsComponent } from './demoposts/demoposts.component';
+import { PostDeatilsComponent } from './post-deatils/post-deatils.component';
+import { KidsComponent } from './kids/kids.component';
 
 
 
@@ -56,7 +60,7 @@ import { GallaryComponent } from './gallary/gallary.component';
     NgassignmentComponent,
     NgforComponent,
     AttriComponent,
-    CustdirDirective,
+  
     PassComponent,
     DemoComponent,
     HooksComponent,
@@ -86,16 +90,21 @@ import { GallaryComponent } from './gallary/gallary.component';
     Servicecomp3Component,
     LoginComponent,
     GallaryComponent,
+    PagenotfoundComponent,
+    DemopostsComponent,
+    PostDeatilsComponent,
+    KidsComponent,
     
-  
-  
+    
   ],
   imports: [
+    
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
