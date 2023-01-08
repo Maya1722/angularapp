@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LaptopComponent } from './laptop/laptop.component';
 import { TvComponent } from './tv/tv.component';
@@ -6,11 +6,11 @@ import { TabletComponent } from './tablet/tablet.component';
 import { WashingmashineComponent } from './washingmashine/washingmashine.component';
 import { AirconditionerComponent } from './airconditioner/airconditioner.component';
 import {  RouterModule, Routes } from '@angular/router';
-import { ProductComponent } from './product.component';
 import { UtilityModule } from '../model/utility.module';
+import { ProductComponent } from './product.component';
 
 const prodRoutes :Routes =[
-  {path:'',  component:ProductComponent ,children:[
+  {path:'', component: ProductComponent ,children:[
     {path:'laptop',component:LaptopComponent},
     {path:'tv',component:TvComponent},
     {path:'tablet',component:TabletComponent},
@@ -27,15 +27,19 @@ const prodRoutes :Routes =[
     TvComponent,
     TabletComponent,
     WashingmashineComponent,
-    AirconditionerComponent
+    AirconditionerComponent,
+    ProductComponent
+    
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(prodRoutes),
     UtilityModule
+
   ],
   exports:[
     RouterModule
+
   ]
 
 })

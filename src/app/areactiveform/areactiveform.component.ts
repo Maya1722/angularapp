@@ -41,6 +41,7 @@ export class AreactiveformComponent implements OnInit {
       'city': new FormControl(''),
       'gender':new FormControl(''),
       'password':new FormControl('',[Validators.required]),
+      'conformpassword':new FormControl('',[Validators.required])
       
 
   

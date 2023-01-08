@@ -45,6 +45,7 @@
                         <input type="text" class="form-control mt-2" formControlName="{{i}}" placeholder="Add Skills">
                     </ng-container>
                     <button class="btn btn-light btn-sm mt-4 btn-add" (click)="OnAddSkills()"><i>+</i> Add Skills</button>
+                
                 </div>
 
 
@@ -60,7 +61,7 @@
                         <p>User Email : <strong>{{myReactiveForm.get('userDetails.email').value}}</strong></p>
                         <p>Selected Course : <strong>{{myReactiveForm.get('course').value}}</strong></p>
                         <p>Gender : <strong>{{myReactiveForm.get('gender').value}}</strong></p>
-                        <p>Skills:<strong>{{myReactiveForm.get('Skills').value}}</strong></p>
+                        <p>Skills:<strong>{{myReactiveForm.get('Skills')}}</strong></p>
         
                     </div>
                 </div>

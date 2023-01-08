@@ -77,6 +77,14 @@
             
                  </small>
                 </div>
+                <div class="form-group">
+                    <label for="conformpassword">conform Password</label>
+                    <input type="conformpassword"  id="conformpassword" class="form-control" formControlName="conformpassword" placeholder="Enter password" >
+                 <small class="text-danger" *ngIf="!myReactiveForm.get('conformpassword').valid && myReactiveForm.get('conformpassword').touched">
+                    <small *ngIf="myReactiveForm.get('conformpassword').errors['required']">Please re-enter password</small>
+            
+                 </small>
+                </div>
                
                
                 <button class="btn btn-success mt-4">Resister</button>

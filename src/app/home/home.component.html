@@ -1,1 +1,77 @@
-<p>home works!</p>
+<h3>Rapid API news Data:-</h3>
+<!--<table class="table table-light">
+    <thead class="head">
+        <tr>
+            <td>Id</td>
+            <td>Title</td>
+            <td>Card</td>
+            <td>SecurityType</td>
+            <td>Symbol</td>
+            
+            <td>Country</td>
+            <td>Currency</td>
+            <td>ResourceType</td>
+            <td>Region</td>
+            <td>Ticker</td>
+            <td>TickerName</td>
+            <td>Template</td>
+            <td>TinyName</td>
+            <td>Name</td>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of apiQuote">
+            <td>{{data.id}}</td>
+            <td>{{data.title}}</td>
+            <td>{{data.card}}</td>
+            <td>{{data.securityType}}</td>
+            <td>{{data.symbol}}</td>
+            <td>{{data.country}}</td>
+            <td>{{data.currency}}</td>
+            <td>{{data.resourceType}}</td>
+            <td>{{data.region}}</td>
+            <td>{{data.ticker}}</td>
+            <td>{{data.tickerName}}</td>
+            <td>{{data.template}}</td>
+            <td>{{data.tinyName}}</td>
+            <td>{{data.name}}</td>
+            
+            
+        </tr>
+    </tbody>
+</table>-->
+
+
+<table class="table table-light">
+    <thead>
+        <tr>
+            <th>{{Card}}</th>
+            <th>{{Date}}</th>
+            <th>{{Id}}</th>
+            <th>{{LongUrl}}</th>
+             <th>{{Title}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of apiNews">
+            <td>{{data.card}}</td>
+            <td>{{data.date}}</td>
+            <td>{{data.id}}</td>
+            <td>{{data.longURL}}</td>
+             <td>{{data.title}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+

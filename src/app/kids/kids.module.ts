@@ -6,6 +6,8 @@ import { ClothComponent } from './cloth/cloth.component';
 import { ShoesComponent } from './shoes/shoes.component';
 import { UtilityModule } from '../model/utility.module';
 import { RouterModule, Routes } from '@angular/router';
+import { KidsRoutingModule } from './kids-routing.module';
+
 
 
 const prodRoutes :Routes =[
@@ -23,15 +25,19 @@ const prodRoutes :Routes =[
   declarations: [
     BagComponent,
     ShoesComponent,
-    ClothComponent
+    ClothComponent,
+    KidsComponent
   ],
   imports: [
     RouterModule.forChild(prodRoutes),
     UtilityModule,
-    CommonModule
+    CommonModule,
+     KidsRoutingModule
+
   ],
   exports:[
-    RouterModule
+    RouterModule,
   ]
+  
 })
 export class KidsModule { }

@@ -1,0 +1,36 @@
+    
+    <div class="container">
+        <h2>Student Registration Form</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-left rounded-shadow py-5">
+                <div [formGroup]="myGroup">
+                    
+                  
+                    <label for="username">username</label>
+                    <input type="username"  class ="form-control" formControlName="username" placeholder="username">
+            
+                    
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" id="email" formControlName="email" placeholder="email">
+                        
+                    
+                
+    
+                
+                         <label for="course">course</label>
+                        <select class="form-control" id="course" formControlName="course">
+                            <option value="Angular">Angular</option>
+                            <option value="Html">Html</option>
+                            <option value="JavaScript">JavaScript</option>
+    
+                        </select>
+            </div>
+        
+                    
+                    <button class="btn btn-success mt-4">submit</button>
+        
+            </div>
+                    
+        </div>
+    </div>
+

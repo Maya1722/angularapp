@@ -1,0 +1,62 @@
+<p>manageproducts works!</p>
+
+<div class="page-area">
+<h2 class="text-center"> Manage Products</h2>
+<br>
+<div class="container border-top pt-5">
+<div class="row">
+<div class="col-md-6">
+    <h2>Add Product</h2>
+    <form>
+<div class="form-group">
+<label for="id">Product Id</label>
+<input type="text" class="form-control" id="id" #id>
+</div>
+<div class="form-group">
+    <label for="name">Product Name</label>
+    <input type="text" class="form-control" id="name" #name>
+    </div>
+    <div class="form-group">
+        <label for="id">Product price</label>
+        <input type="text" class="form-control" id="price" #price>
+        </div>
+        <button type="button" class="btn btn-success" (click)="onAddProduct()">Add Product</button>
+
+     <button type="button" class="btn btn-primary" (click)="onSaveProduct()">save Product</button>
+
+     <button type="button" class="btn btn-warning" (click)="onFetchProduct()">fetch Product</button>
+    </form>
+</div>
+<div class="col-md-6">
+    <h2> {{datatitle}}</h2>
+<table class="table">
+
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let  product of data ; index as i">
+            <th scope="row">{{i+1}}</th>
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.price}}</td>
+            <td ><button type="button" (click)="onEditProduct(i)" class="btn btn-success">Edit</button></td>
+            <td ><button type="button" (click)="onDeleteProduct(i)" class="btn btn-danger">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+<br>
+<br>

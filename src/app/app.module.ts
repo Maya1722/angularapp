@@ -37,7 +37,6 @@ import { EmployeeDataComponent } from './employee-data/employee-data.component';
 import { FilterPipe } from './pipe/filter.pipe';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
-import { ProductComponent } from './product/product.component';
 import { HomeComponent } from './home/home.component';
 import{HttpClientModule} from '@angular/common/http';
 import { Servicecomp3Component } from './servicecomp3/servicecomp3.component';
@@ -46,7 +45,12 @@ import { GallaryComponent } from './gallary/gallary.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { DemopostsComponent } from './demoposts/demoposts.component';
 import { PostDeatilsComponent } from './post-deatils/post-deatils.component';
-import { KidsComponent } from './kids/kids.component';
+import { AdduserComponent } from './adduser/adduser.component';
+import { RapidapiComponent } from './rapidapi/rapidapi.component';
+import { FirebaseComponent } from './firebase/firebase.component';
+import { ManageproductsComponent } from './manageproducts/manageproducts.component';
+
+
 
 
 
@@ -85,7 +89,6 @@ import { KidsComponent } from './kids/kids.component';
     FilterPipe,
     AboutusComponent,
     ContactusComponent,
-    ProductComponent,
     HomeComponent,
     Servicecomp3Component,
     LoginComponent,
@@ -93,7 +96,12 @@ import { KidsComponent } from './kids/kids.component';
     PagenotfoundComponent,
     DemopostsComponent,
     PostDeatilsComponent,
-    KidsComponent,
+    AdduserComponent,
+    RapidapiComponent,
+    FirebaseComponent,
+    ManageproductsComponent
+
+
     
     
   ],
