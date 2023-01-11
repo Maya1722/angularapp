@@ -1,4 +1,4 @@
-import { HttpClient} from '@angular/common/http';
+import { HttpClient,HttpHeaders} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -6,22 +6,30 @@ import { Injectable } from '@angular/core';
 })
 export class MaxproductsService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private httpClient:HttpClient) { }
 
 
-  url="https://angular-crud-operation-8dac1-default-rtdb.firebaseio.com/";
+  url="https://angular-crud-operation-8dac1-default-rtdb.firebaseio.com/products.json";
  
  
-  saveProduct(products:any=[]){
+  saveProduct(products:any[]){
 
 
-   return this.http.post(this.url+'products.json',products);
+    //return this.httpClient.post(this.url+'products.json',products);
  
- // return this.http.put(this.url,products);
+       return this.httpClient.put(this.url,products);
 
 }
-fetchProducts(){
+fetchProduct(){
 
-  return this.http.get(this.url+'products.json');
+  return this.httpClient.get(this.url);
+}
+
+
+deleteProduct(id){
+   return this.httpClient.delete(id);
+
 }
 }
+
+
